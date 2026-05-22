@@ -13,7 +13,7 @@
     <!-- Google Fonts: Inter -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
-    <!-- Tailwind CSS (sebagai ganti Bootstrap untuk desain lebih modern & premium) -->
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -369,7 +369,7 @@
                     <div class="glass p-6 rounded-2xl">
                         <div class="flex justify-between items-center mb-6">
                             <h3 class="text-lg font-bold text-gray-800">Data Kelas</h3>
-                            <button onclick="showMockAlert('Fitur Tambah Kelas')" class="bg-emerald-500 text-white px-4 py-2 rounded-xl text-sm font-medium hover:bg-emerald-600 transition"><i class="fa-solid fa-plus mr-1"></i> Tambah</button>
+                            <button onclick="tambahKelas()" class="bg-emerald-500 text-white px-4 py-2 rounded-xl text-sm font-medium hover:bg-emerald-600 transition"><i class="fa-solid fa-plus mr-1"></i> Tambah</button>
                         </div>
                         <div class="overflow-x-auto">
                             <table class="w-full text-left text-sm whitespace-nowrap">
@@ -790,7 +790,7 @@
         }
 
         // ==========================================
-        // EXPORT & MOCK ALERTS
+        // EXPORT & FEATURE ALERTS
         // ==========================================
         async function exportLaporan(type) {
             const tgl = document.getElementById('rekap-tanggal').value;
@@ -811,11 +811,12 @@
             }
         }
 
-        function showMockAlert(feature) {
+        function tambahKelas() {
             Swal.fire({
-                title: 'Fitur Aktif!',
-                text: `${feature} akan memanggil endpoint API CRUD Apps Script pada versi full.`,
-                icon: 'info', confirmButtonColor: '#10b981'
+                title: 'Segera Hadir',
+                text: 'Fitur penambahan kelas sedang dalam tahap pengembangan.',
+                icon: 'info', 
+                confirmButtonColor: '#10b981'
             });
         }
 
